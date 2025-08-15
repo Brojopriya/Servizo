@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/SignUp.module.css";
+import './signup.css';
 
 
  const validate = (data) => {

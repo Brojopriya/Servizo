@@ -8,18 +8,16 @@
     
       min-height: 100vh;
       width: 100%;
-      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(home.png);
+      background-image: linear-gradient(rgba(0, 2, 7, 0.862), rgba(4, 9, 30, 0.7)), url(home.png);
       background-position: center;
       background-size: cover;
       position: relative;
   
   }
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: transparent; /* fully transparent */
+   padding: 10px 20px;
+   display: flex;
   }
   
   .navbar .logo {
@@ -56,7 +54,7 @@
  
   .main-content {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,20 +62,23 @@
   }
   
   .main-content h1 {
-    font-size: 2.5rem;
-    color: #12c654;
+    font-size: 2.8rem;
+    color: #7da1e1;
+    font-weight: bold !important;
   }
   
   .main-content p {
-    font-size: 1.2rem;
-    color: #befe00bb;
+    font-size: 1.5rem;
+    color: #e3e9f0bb;
     margin-top: 20px;
+    font-weight: bold !important;
+
   }
   
   .register-btn {
     padding: 15px 30px;
     font-size: 1.2rem;
-    background-color: #007bff;
+    background-color: #0f57a4;
     color: white;
     border: none;
     border-radius: 5px;

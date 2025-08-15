@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './fg.css';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -39,7 +40,7 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div style={styles.container}>
+    <div className="forgotpassword-container" style={styles.container}>
       <div style={styles.formWrapper}>
         <h2>Forgot Password</h2>
         <form onSubmit={handleSubmit} style={styles.form}>
@@ -70,6 +71,7 @@ const ForgotPassword = () => {
       </div>
     </div>
   );
+  
 };
 
 const styles = {

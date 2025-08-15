@@ -1,0 +1,28 @@
+.forgotpassword-container {
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    height: 100vh;            /* full viewport height */
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 2, 7, 0.86), rgba(4, 9, 30, 0.7)), url('home.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+}
+.forgotpassword-form {
+    background-color: rgba(180, 184, 196, 0.95); /* semi-transparent to show background */
+    width: 90vw;               /* responsive width */
+    max-width: 400px;          /* maximum width */
+    aspect-ratio: 1 / 1;       /* keeps it a perfect square */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(2, 26, 88, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0b1a3b;
+    box-sizing: border-box;
+}

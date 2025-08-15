@@ -20,7 +20,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="logo">
         <img src={logo} alt="Service Technician Finder Logo" />
-        <span>Service Technician Finder</span>
+        <span className="brand-name">Servizo</span>
       </div>
       <div>
     {/* Common Links for all users */}

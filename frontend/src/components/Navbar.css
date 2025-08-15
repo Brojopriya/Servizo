@@ -2,19 +2,43 @@
 
 /* Basic navbar styling */
 .navbar {
-    background-color: #333;
-    padding: 10px;
+    background-color: #060c16;
+    padding: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .navbar-logo {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
+  
+  /* Logo Brand Name Styling */
+  .brand-name {
+    font-size: 34px !important;
+    font-weight: bold !important;
+    color: #f2f6f9 !important;
+    font-family: Helvetica, sans-serif !important;
+    letter-spacing: 1px; /* adds breathing space between letters */
+    transition: color 0.3s; /* smooth hover effect */
   }
   
+  .brand-name:hover {
+    color: #1a1a5e; /* slightly lighter/different shade on hover */
+    cursor: pointer;
+  }
+  
+  
+
+/* Navbar link styles */
+.navbar-links li a {
+  color: #e6ebf3; /* White text */
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+
+
   .navbar-links {
     display: flex;
     list-style: none;
@@ -31,7 +55,7 @@
   }
   
   .navbar-links a:hover {
-    color: #ffcc00;
+    color: #dfb407;
   }
   
   .auth-links,

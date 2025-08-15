@@ -1,0 +1,107 @@
+/* SignUp.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: #0b1a3b; /* dark background */
+    box-sizing: border-box;
+}
+
+/* Make the whole page background dark blue/black */
+body, html {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 2, 7, 0.862), rgba(4, 9, 30, 0.7)), url(home.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+  }
+  
+  
+  form {
+    background-color: #a6b5dd; /* dark navy/black background */
+    padding: 40px 30px;
+    border-radius: 20px; /* softer corners */
+    border: none;
+    box-sizing: border-box; /* includes padding inside width */
+    overflow: hidden; /* remove any border */
+    box-shadow: 0 8px 20px rgb(168, 185, 235); /* subtle dark shadow */
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    color: #ece7e7; /* text inside form */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional hover effect for slight lift */
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+  
+  h2 {
+    text-align: center;
+    color: #0b2879; /* dark blue */
+    margin-bottom: 25px;
+    font-family: 'Helvetica', sans-serif;
+  }
+  
+  input, select {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #1e3a8a; /* dark blue border */
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #3b82f6; /* bright blue on focus */
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  
+  button {
+    background-color: #1e3a8a; /* dark blue */
+    color: #ffffff; /* white text */
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3b82f6; /* bright blue hover */
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 15px;
+    color: #070831; /* almost black */
+    font-size: 14px;
+  }
+  
+  p a {
+    color: #3b82f6; /* bright blue */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  .error {
+    color: #ff4d4f; /* red for errors */
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  

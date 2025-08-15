@@ -4,16 +4,25 @@
     justify-content: center; /* Center horizontally */
     align-items: center;    /* Center vertically */
     height: 100vh;          /* Full viewport height */
-    background-color: #f0f0f0; /* Optional light background */
+     /* Optional light background */
     margin: 0;
+  }
+  body, html {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 2, 7, 0.862), rgba(4, 9, 30, 0.7)), url(home.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
   }
   
   /* Styling the login box */
   .login-box {
-    background-color: #ffffff;
+    background-color: #d8e3f1;
     padding: 30px 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgb(112, 121, 163);
     text-align: center;
     width: 100%;
     max-width: 400px; /* Restrict max width for responsiveness */
