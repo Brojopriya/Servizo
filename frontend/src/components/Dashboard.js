@@ -264,174 +264,95 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard">
-      <h1>Customer Dashboard</h1>
-      <p>{message}</p>
-
-      <div className="actions">
-        <button onClick={handleDeleteAccount}>Delete Account</button>
-        <button onClick={handleLogout}>Logout</button>
-        <button onClick={() => navigate('/update-profile')}>
-          Update Your Information
-        </button>
+    <div className="dashboard-container">
+      {/* LEFT PANEL */}
+      <div className="left-panel">
+        <h2>Find & Book Technician</h2>
+        <form onSubmit={handleBookingSubmit}>
+          <select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)}>
+            <option value="">Select City</option>
+            {cities.map((city) => (
+              <option key={city.city_id} value={city.city_id}>{city.city_name}</option>
+            ))}
+          </select>
+  
+          <select value={selectedArea} onChange={(e) => setSelectedArea(e.target.value)}>
+            <option value="">Select Area</option>
+            {areas.map((area) => (
+              <option key={area.zipcode} value={area.zipcode}>{area.area}</option>
+            ))}
+          </select>
+  
+          <select value={selectedTechnician} onChange={handleTechnicianChange}>
+            <option value="">Select Technician</option>
+            {technicians.map((tech) => (
+              <option key={tech.user_id} value={tech.user_id}>
+                {tech.user_name} - {tech.services}
+              </option>
+            ))}
+          </select>
+  
+          <div className="technician-details">
+            <h4>Technician Details</h4>
+            <img
+              src={technicianDetails.profile_picture ? 
+                `http://localhost:8000/uploads/${technicianDetails.profile_picture}` : dp} 
+              alt="Technician"
+            />
+            <p>Experience: {technicianDetails.experience_years} years</p>
+            <p>Rating: {technicianDetails.rating}</p>
+            <p>Reviews: {technicianDetails.reviews_count}</p>
+            <p>Bookings: {technicianDetails.booking_count}</p>
+          </div>
+  
+          <input type="date" value={bookingDate} onChange={(e) => setBookingDate(e.target.value)} />
+          <button type="submit">Book Technician</button>
+        </form>
+  
+        <h3>Your Bookings</h3>
+        <ul>
+          {bookings.map((booking) => (
+            <li key={booking.booking_id}>
+              {booking.technician_name} - {booking.booking_date} - {booking.status}
+            </li>
+          ))}
+        </ul>
       </div>
-
-      {/* Toggle Button for Customer Details */}
-      <div className="show-details-button">
-        <button onClick={toggleCustomerDetails}>
-          {isCustomerDetailsVisible ? 'Hide' : 'Show'} Your Details
-        </button>
-      </div>
-
-      {/* Conditionally Render Customer Details */}
-      {isCustomerDetailsVisible && (
-        <div className="customer-details">
+  
+      {/* RIGHT PANEL */}
+      <div className="right-panel">
+        <div className="user-info">
           <h2>Your Details</h2>
           <p><strong>Name:</strong> {customerDetails.user_name}</p>
-          <p><strong>Phone Number:</strong> {customerDetails.phone_number}</p>
+          <p><strong>Phone:</strong> {customerDetails.phone_number}</p>
           <p><strong>Email:</strong> {customerDetails.email}</p>
+  
+          <h3>Best Technician of Last Month</h3>
+          {bestTechnician ? (
+            <div>
+              <p>Name: {bestTechnician.user_name}</p>
+              <p>Experience: {bestTechnician.experienced_year} years</p>
+              <p>Rating: {bestTechnician.avg_rating}</p>
+              <p>Total Bookings: {bestTechnician.total_bookings}</p>
+            </div>
+          ) : <p>Select your area first.</p>}
+  
+          <h3>Last Login</h3>
+          <p>{lastLogin ? new Date(lastLogin).toLocaleString() : 'Loading...'}</p>
         </div>
-      )}
-      <div className="best-technician">
-  <h3>Best Technician of Last Month</h3>
-  {bestTechnician ? (
-    <div>
-      <p><strong>Name:</strong> {bestTechnician.user_name}</p>
-      <p><strong>Experience:</strong> {bestTechnician.experienced_year} years</p>
-      <p><strong>Average Rating:</strong> {bestTechnician.avg_rating}</p>
-      <p><strong>Total Bookings:</strong> {bestTechnician.total_bookings}</p>
-    </div>
-  ) : (
-    <p>Please select your area first.</p>
-  )}
-</div>
-
-      <div className="last-login">
-     <h2>Last Login</h2>
-    <p>{lastLogin ? new Date(lastLogin).toLocaleString() : 'Loading...'}</p>
-    </div>
-
-
-      <h2>Find and Book a Technician</h2>
-      <form onSubmit={handleBookingSubmit}>
-        <select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)}>
-          <option value="">Select City</option>
-          {cities.map((city) => (
-            <option key={city.city_id} value={city.city_id}>
-              {city.city_name}
-            </option>
-          ))}
-        </select>
-
-        <select value={selectedArea} onChange={(e) => setSelectedArea(e.target.value)}>
-          <option value="">Select Area</option>
-          {areas.map((area) => (
-            <option key={area.zipcode} value={area.zipcode}>
-              {area.area}
-            </option>
-          ))}
-        </select>
-
-        <select value={selectedTechnician} onChange={handleTechnicianChange}>
-          <option value="">Select Technician</option>
-          {technicians.map((technician) => (
-            <option key={technician.user_id} value={technician.user_id}>
-              {technician.user_name}- {technician.services}
-            </option>
-          ))}
-        </select>
-
-        <div>
-          <h4>Technician Details</h4>
-          {technicianDetails.profile_picture ? (
-    <img
-      src={`http://localhost:8000/uploads/${technicianDetails.profile_picture}`}
-      alt="Technician Profile"
-      style={{ width: '100px', height: '100px', borderRadius: '50%' }}
-    />
-  ) : (
-    <img
-      src={dp} // Path to your default image
-      alt="Default Profile"
-      style={{ width: '100px', height: '100px', borderRadius: '50%' }}
-    />
-  )}
-          <p><strong>Experience:</strong> {technicianDetails.experience_years} years</p>
-          <p><strong>Rating:</strong> {technicianDetails.rating}</p>
-          <p><strong>Reviews Count:</strong> {technicianDetails.reviews_count}</p>
-          <p><strong>Bookings:</strong> {technicianDetails.booking_count}</p>
+  
+        {/* Bottom Buttons */}
+        <div className="right-bottom-buttons">
+          <button onClick={handleDeleteAccount}>Delete Account</button>
+          <button onClick={handleLogout}>Logout</button>
+          <button onClick={() => navigate('/update-profile')}>Update Info</button>
         </div>
-
-        <input
-          type="date"
-          value={bookingDate}
-          onChange={(e) => setBookingDate(e.target.value)}
-        />
-        <button type="submit">Book Technician</button>
-      </form>
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      {confirmationMessage && <p style={{ color: 'green' }}>{confirmationMessage}</p>}
-
-      {/* Booking List */}
-      <h3>Your Bookings</h3>
-      <ul>
-  {bookings.map((booking) => (
-    <li key={booking.booking_id} className="booking-item">
-      <div className="booking-info">
-        {booking.technician_name} - {booking.booking_date} - {booking.status}
       </div>
-
-      {/* Show "Provide Review" button only if status is 'Completed' and no review exists */}
-      {booking.status === 'Completed' && !booking.review ? (
-        selectedBookingId === booking.booking_id ? (
-          <div className="review-form">
-            <label htmlFor="rating">Rating:</label>
-            <select
-              id="rating"
-              value={rating}
-              onChange={(e) => setRating(e.target.value)}
-            >
-              <option value="">Select Rating</option>
-              {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
-                <option key={num} value={num}>
-                  {num}
-                </option>
-              ))}
-            </select>
-
-            <label htmlFor="review">Review:</label>
-            <textarea
-              id="review"
-              value={review}
-              onChange={(e) => setReview(e.target.value)}
-              placeholder="Write your review here..."
-            ></textarea>
-
-            <button
-              onClick={() => handleReviewSubmit(booking.booking_id)}
-            >
-              Submit Review
-            </button>
-            <button onClick={() => toggleReviewForm(null)}>Cancel</button>
-          </div>
-        ) : (
-          <button onClick={() => toggleReviewForm(booking.booking_id)}>
-            Provide Review
-          </button>
-        )
-      ) : (
-        <span>Status: {booking.status}</span>
-      )}
-    </li>
-  ))}
-</ul>
-
-
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      {confirmationMessage && <p style={{ color: 'green' }}>{confirmationMessage}</p>}
     </div>
-    
   );
+  
+
 };
+
 
 export default Dashboard;

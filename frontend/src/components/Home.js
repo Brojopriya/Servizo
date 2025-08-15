@@ -65,9 +65,7 @@ const Home = () => {
     
 
       
-      <footer className="footer">
-        <p>&copy; 2024 Service Technician Finder. All Rights Reserved.</p>
-      </footer>
+      
     </div>
   );
 };

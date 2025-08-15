@@ -4,10 +4,11 @@ import './About.css';
 const About = () => {
   return (
     <div className="about-container">
-      <h1>About Service Technician Finder</h1>
+      <h1 className="about-title">About Servizo</h1>
+      
       <div className="about-content">
         <p>
-          The <strong>Service Technician Finder System</strong> is designed to connect users with skilled and reliable technicians for a wide range of services, including electrical repairs, plumbing, painting, and more. Our platform aims to simplify the process of finding and hiring professionals, ensuring that users can quickly and easily address their home and business needs.
+          The <strong>Servizo</strong> is designed to connect users with skilled and reliable technicians for a wide range of services, including electrical repairs, plumbing, painting, and more. Our platform aims to simplify the process of finding and hiring professionals, ensuring that users can quickly and easily address their home and business needs.
         </p>
         <h2>Our Vision</h2>
         <p>

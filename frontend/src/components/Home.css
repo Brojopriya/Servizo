@@ -63,14 +63,14 @@
   
   .main-content h1 {
     font-size: 2.8rem;
-    color: #7da1e1;
+    color: #af8205;
     font-weight: bold !important;
   }
   
   .main-content p {
     font-size: 1.5rem;
-    color: #e3e9f0bb;
-    margin-top: 20px;
+    color: #c5daf2bb;
+    margin-top: .5px;
     font-weight: bold !important;
 
   }
@@ -83,7 +83,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 99px;
     width: auto; /* Prevent it from stretching across the full page */
     max-width: 300px; /* Optional: limit button width */
   }

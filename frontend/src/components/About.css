@@ -1,37 +1,61 @@
 .about-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: left;
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
+  max-width: 900px;       /* Limits the width */
+  margin: 0 auto;         /* Centers the container */
+  padding: 20px;
+  background: #03090f57;    /* Optional light background */
+}
+
+.about-title {
+  text-align: center;     /* Only the title is centered */
+  font-size: 36px;
+  color: #d47d0c;         /* Title color */
+  margin-bottom: 30px;
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #ffdd57; /* gold/yellow */
+  border-bottom: 3px solid #977f04;
   
-  .about-container h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-  }
-  
-  .about-container h2 {
-    font-size: 1.8rem;
-    margin-top: 20px;
-    color: #34495e;
-  }
-  
-  .about-content p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-  }
-  
-  .about-content ul {
-    margin-left: 20px;
-    list-style-type: disc;
-  }
-  
-  .about-content li {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
+}
+
+
+.about-content h2 {
+  color: #6f92f5;         /* Headings color */
+  margin-top: 20px;
+}
+
+.about-content ul {
+  margin-left: 20px;      /* Indent bullet points */
+  color: #f8f5f5;         /* List text color */
+}
+
+.about-content strong {
+  color: #deb212;         /* Strong/bold text color */
+}
+/* Lists */
+.about-content ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  list-style-type: disc;
+}
+
+.about-content ul li {
+  margin-bottom: 10px;
+  color: #ffffff; /* white for list items */
+}
+
+/* Strong text */
+strong {
+  color: #ffd700; /* yellow */
+}
+
+
+/* Paragraphs */
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #e0e0e0; /* light grey */
+}

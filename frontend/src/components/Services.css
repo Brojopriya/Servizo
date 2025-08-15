@@ -9,7 +9,7 @@
   .services-container h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #f3a704;
   }
   
   .services-list {
@@ -21,13 +21,16 @@
     font-size: 1.2rem;
     margin: 10px 0;
     padding: 10px;
-    background: #f8f9fa;
+    color:aliceblue;
+    background: #051c34;
     border: 1px solid #dee2e6;
     border-radius: 5px;
   }
   
   .service-item:hover {
-    background-color: #e9ecef;
+    background-color: #b0c6dc;
+    color:#051c34;
+    border: 1px solid #030f1c;
     cursor: pointer;
   }
   
