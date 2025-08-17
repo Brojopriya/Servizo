@@ -6,7 +6,7 @@ body, html { margin:0; padding:0; font-family: 'Segoe UI', sans-serif; backgroun
   padding: 20px;
   display: flex;
   justify-content: center; /* center horizontally */
-  background: linear-gradient(135deg,#99b5ce,#142c53);
+  background: linear-gradient(135deg,#99b5ce26,#142c5373);
   color: #c8d9e9;
   box-sizing: border-box;
 }
@@ -47,13 +47,13 @@ body, html { margin:0; padding:0; font-family: 'Segoe UI', sans-serif; backgroun
 }
 
 .left-panel{
-  background: rgba(16, 65, 124, 0.309); border-radius:12px; padding:20px; overflow-y:auto;
+  background: rgba(156, 176, 200, 0.572); border-radius:12px; padding:20px; overflow-y:auto;
 }
 .middle-panel {
-  background: rgba(91, 98, 202, 0.416); border-radius:12px; padding:20px; overflow-y:auto;
+  background: rgba(138, 168, 227, 0.533); border-radius:12px; padding:20px; overflow-y:auto;
 }
 .right-panel {
-  background: rgba(135, 191, 239, 0.343); border-radius:12px; padding:20px; overflow-y:auto;
+  background: rgba(132, 178, 219, 0.514); border-radius:12px; padding:20px; overflow-y:auto;
 }
 
 .left-panel { flex:1;
@@ -163,4 +163,21 @@ form button.submit { background:#28a745; color:white; font-weight:bold; }
   margin-top: 8px;
   font-style: italic;
   word-wrap: break-word;
+}
+/* Your Details Box */
+.dashboard .technician-details {
+  background-color: #59aba3 !important; /* Light blue background */
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.12);
+  border-left: 5px solid #4a90e2; /* optional colored accent */
+}
+
+.dashboard .technician-details h2 {
+  color: #2c3e50;
+}
+
+.dashboard .technician-details p {
+  color: #333;
 }
