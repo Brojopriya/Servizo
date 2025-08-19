@@ -1,0 +1,75 @@
+/* UpdateProfile.css */
+
+.update-profile {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .update-profile h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .update-profile form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .update-profile input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .update-profile input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+  }
+  
+  .update-profile button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4a90e2;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .update-profile button:hover {
+    background: #357abd;
+  }
+  
+  .update-profile .success {
+    margin-top: 15px;
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  .update-profile .error {
+    margin-top: 15px;
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  .update-profile .back-button {
+    margin-top: 15px;
+    background: #7f8c8d;
+  }
+  
+  .update-profile .back-button:hover {
+    background: #636e72;
+  }
+  

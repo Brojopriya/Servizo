@@ -14,14 +14,6 @@ import About from './components/About';
 import Services from './components/Services';
 import CreateTechnician from './components/CreateTechnician';      
 
-// import VerifyCode from './components/VerifyCode';                
-// import ResetPassword from './components/ResetPassword';          
-
-// PrivateRoute component to protect routes
-// const PrivateRoute = ({ element, ...rest }) => {
-//   const token = localStorage.getItem('token');  // Check if user is logged in
-//   return token ? element : <Navigate to="/login" />;
-// };
 const PrivateRoute = ({ element, allowedRoles }) => {
   const token = localStorage.getItem('token');
   const role = localStorage.getItem('role');
