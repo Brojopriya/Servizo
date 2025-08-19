@@ -6,11 +6,11 @@ const Contact = () => {
     <div className="contact-container">
       {/* <h1>Contact Us</h1> */}
       <div className="contact-details">
-        <h2>Arafat Sheikh</h2>
-        <p>Email: <a href="mailto:arafat.csecu@gmail.com">arafat.csecu@gmail.com</a></p>
+        <h2>Servizo Help Center</h2>
+        <p>Email: <a href="mailto:servizo@gmail.com">servizo@gmail.com</a></p>
         <p>
           Head Office: Chittagong, Bangladesh<br />
-          Address: Room 218, Shaheed Abdur Rab Hall,<br />
+          Address: Computer Science and Engineering Department,<br />
           University of Chittagong
         </p>
       </div>
