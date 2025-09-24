@@ -201,8 +201,15 @@ const Dashboard = () => {
           <div className="bookings-list">
             {bookings.map(booking => (
               <div key={booking.booking_id} className="booking-card">
-                <p><strong>{booking.technician_name}</strong> <br /> {booking.booking_date} <br />
-                <span className={`status ${booking.status.toLowerCase()}`}>{booking.status}</span></p>
+                <p>
+                  <strong>{booking.technician_name}</strong> <br /> 
+                  {booking.booking_date} <br />
+                  <span className={`status ${booking.status?.toLowerCase() ?? "unknown"}`}>
+                    {booking.status ?? booking.technician_name}
+                  </span>
+                </p>
+
+
 
                 {booking.status === "Completed" && !booking.review ? (
                   selectedBookingId === booking.booking_id ? (
